@@ -19,7 +19,10 @@
 	--valid-fields-color: #31d0aa;
 	--background-color: #fff;
 	--button-color: #404bbf;
+	--modal-background-color: #fcfcfc;
+
 	--main-font: Roboto, sans-serif;
+	--transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -97,7 +100,7 @@ a {
 .logo-first {
 	color: var(--main-text-color);
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--transition);
 }
 
 .navigation {
@@ -118,7 +121,7 @@ a {
 	padding: 24px 0;
 	display: block;
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--transition);
 }
 
 .current {
@@ -133,7 +136,7 @@ a {
 .contakts-link {
 	color: var(--secondary-text-color);
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--transition);
 }
 
 .logo-first:hover,
@@ -188,7 +191,7 @@ a {
 	margin: 0 auto;
 	margin-top: 48px;
 
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--transition);
 }
 
 .solution-btn:hover,
@@ -328,7 +331,7 @@ a {
 	border-radius: 50%;
 	background-color: var(--focused-links-color);
 
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--transition);
 }
 
 .social-list-link:hover,
@@ -364,7 +367,7 @@ a {
 	border-radius: 4px;
 	color: var(--helper-text-color);
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--transition);
 }
 
 .customers-list-link:hover,
@@ -472,7 +475,7 @@ a {
 	background-color: var(--light-background-color);
 	padding: 12px 24px;
 
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--transition);
 }
 
 .portfolio-btn:hover,
@@ -497,15 +500,43 @@ a {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.prop-link {
+.prop-item {
 	display: block;
 
-	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: box-shadow var(--transition);
 }
 
-.prop-link:hover,
-.prop-link:focus {
+.prop-item:hover,
+.prop-item:focus {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.prop-item-img {
+	position: relative;
+	overflow: hidden;
+}
+
+.overlay {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	transform: translate(0, 100%);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	position: absolute;
+	line-height: 1.5;
+	color: var(--light-background-color);
+	background-color: var(--focused-links-color);
+	padding-top: 40px;
+	padding-bottom: 164px;
+	padding-left: 32px;
+	padding-right: 32px;
+}
+
+.prop-item:hover .overlay,
+.prop-item:focus .overlay {
+	transform: translate(0, 0);
 }
 
 .proposit {
@@ -529,11 +560,24 @@ a {
 	letter-spacing: 0.02em;
 }
 
-/* цвет основного текста #2E2F42 */
-/* вторичный цвет текста #434455 */
-/* акцент на макете WEB в heder и footer #4D5AE5*/
-/* цвет текста в hero #fff*/
-/* цвет studio в footer #F4F4FD */
-/* цвет основного фона #fff */
-/* цвет вторичного фона #F4F4FD */
-/* цвет фона в hero и footer #2E2F42 */
+/* Modal Window */
+
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(46, 47, 66, 0.4);
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 408px;
+	height: 576px;
+	background-color: var(--modal-background-color);
+}
