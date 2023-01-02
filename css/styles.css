@@ -96,6 +96,8 @@ a {
 
 .logo-first {
 	color: var(--main-text-color);
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation {
@@ -115,6 +117,8 @@ a {
 	color: var(--main-text-color);
 	padding: 24px 0;
 	display: block;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
@@ -128,6 +132,8 @@ a {
 }
 .contakts-link {
 	color: var(--secondary-text-color);
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-first:hover,
@@ -181,6 +187,8 @@ a {
 	padding: 16px 32px;
 	margin: 0 auto;
 	margin-top: 48px;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .solution-btn:hover,
@@ -319,6 +327,8 @@ a {
 	height: 40px;
 	border-radius: 50%;
 	background-color: var(--focused-links-color);
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -353,6 +363,8 @@ a {
 	border-color: currentColor;
 	border-radius: 4px;
 	color: var(--helper-text-color);
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-list-link:hover,
@@ -459,6 +471,8 @@ a {
 	color: var(--focused-links-color);
 	background-color: var(--light-background-color);
 	padding: 12px 24px;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-btn:hover,
@@ -485,6 +499,8 @@ a {
 
 .prop-link {
 	display: block;
+
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .prop-link:hover,
