@@ -126,6 +126,7 @@ a {
 
 .current {
 	color: var(--button-color);
+	position: relative;
 }
 
 .current::after {
@@ -136,8 +137,7 @@ a {
 	background-color: #404bbf;
 	position: absolute;
 	left: 0;
-	bottom: -24px;
-	display: block;
+	bottom: 0;
 }
 
 .contakts {
@@ -456,6 +456,8 @@ a {
 	height: 40px;
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
+
+	transition: background-color var(--transition);
 }
 
 .media-list-link:hover,
@@ -492,14 +494,9 @@ a {
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 1.5x;
-	letter-spacing: 0.04em;
 	color: var(--background-color);
 	background-color: var(--focused-links-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-	border-radius: 4px;
 }
 
 .propositions {
